@@ -17,10 +17,10 @@ export default function Navbar() {
     ];
 
     const menuDropdown = [
-        { title: 'Profile', href: '/profile'},
-        { title: 'Setting', href: '/setting'},
-        { title: 'Logout', href: '/logout'},
-    ]
+        { title: 'Profile', href: '/profile' },
+        { title: 'Setting', href: '/setting' },
+        { title: 'Logout', href: '/logout' },
+    ];
 
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
@@ -36,7 +36,7 @@ export default function Navbar() {
                 <div>
                     <ul className="flex gap-4">
                         {menuMid.map((item, index) => (
-                            <li key={index} className='font-semibold'>
+                            <li key={index} className="font-semibold">
                                 <a href={item.href}>{item.title}</a>
                             </li>
                         ))}
@@ -51,18 +51,18 @@ export default function Navbar() {
                                     <FaAngleDown />
                                 </div>
                                 {isDropdownOpen && (
-                                    <div className="absolute right-0 mt-4 rounded border p-2 shadow-lg space-y-2 w-24 bg-black">
-                                        {menuDropdown.map((item, index) =>
-                                        <div key={index} className='w-full justify-center flex flex-col items-center'>
-                                            <a href={item.href}>{item.title}</a>
-                                        </div>
-                                    )}
+                                    <div className="absolute right-0 mt-4 w-24 space-y-2 rounded border bg-black p-2 shadow-lg">
+                                        {menuDropdown.map((item, index) => (
+                                            <div key={index} className="flex w-full flex-col items-center justify-center">
+                                                <a href={item.href}>{item.title}</a>
+                                            </div>
+                                        ))}
                                     </div>
                                 )}
                             </div>
                         ) : (
                             menuRight.map((item, index) => (
-                                <li key={index} className='font-semibold'>
+                                <li key={index} className="font-semibold">
                                     <a href={item.href}>{item.title}</a>
                                 </li>
                             ))

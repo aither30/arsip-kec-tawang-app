@@ -9,7 +9,7 @@ class KibRekapitulasi extends Model
 {
     use HasFactory;
 
-    protected $table = 'kibRekapitulasi';
+    protected $table = 'kib_rekapitulasi';
 
     protected $fillable = [
         'jenis_barang',

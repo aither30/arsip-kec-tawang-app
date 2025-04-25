@@ -1,11 +1,11 @@
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import { KibRekapitulasiItem } from '@/types';
+import { KibMutasiMasukKibA } from '@/types';
 
-interface TableKibRekapitulasiProps {
-    data: KibRekapitulasiItem[];
+interface TableKibMutasiMasukProps {
+    data: KibMutasiMasukKibA[];
 }
 
-export default function TableKibRekapitulasi({ data }: TableKibRekapitulasiProps) {
+export default function KibMutasiMasukTable({ data }: TableKibMutasiMasukProps) {
     return (
         <div className="overflow-x-auto">
             <Table>

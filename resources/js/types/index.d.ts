@@ -13,7 +13,7 @@ export interface BreadcrumbItem {
 interface AppHomeProps {
     children: ReactNode;
     breadcrumbs?: BreadcrumbItem[]; // <== Tambah ini
-  }
+}
 
 export interface NavGroup {
     title: string;
@@ -123,7 +123,6 @@ export interface KibDItem {
     keterangan?: string;
 }
 
-
 export interface KibEItem {
     id: number;
     nama_barang: string;
@@ -142,9 +141,9 @@ export interface KibEItem {
     harga: number;
     created_at: string;
     updated_at: string;
-  }
-  
-  export interface KibFItem {
+}
+
+export interface KibFItem {
     id: number;
     nama_barang: string;
     konstruksi_bertingkat: string;
@@ -161,8 +160,8 @@ export interface KibEItem {
     keterangan?: string | null;
     created_at: string;
     updated_at: string;
-  }
-  export interface KibRekapitulasiItem {
+}
+export interface KibRekapitulasiItem {
     id: number;
     jenis_barang: string;
     tanggal_surat_pesanan: string | null;
@@ -176,5 +175,62 @@ export interface KibEItem {
     keterangan: string | null;
     created_at: string;
     updated_at: string;
-  }
-    
+}
+
+export interface KibMutasiMasukKibA {
+    id: number;
+    jenis_barang: string;
+    tanggal_surat_pesanan: string | null;
+    nomor_surat_pesanan: string | null;
+    tanggal_dpa_spm: string | null;
+    nomor_dpa_spm: string | null;
+    jumlah_barang: number;
+    harga_satuan: number;
+    jumlah_harga: number;
+
+    dipergunakan_untuk: string | null;
+    keterangan: string | null;
+
+    created_at: string;
+    updated_at: string;
+}
+
+export interface PengadaanBarangInventarisItem {
+    id: number;
+    jenis_barang: string;
+    tanggal_surat_pesanan: string | null;
+    nomor_surat_pesanan: string | null;
+    tanggal_dpa_spm: string | null;
+    nomor_dpa_spm: string | null;
+    banyak_barang: number | null;
+    harga_satuan: number | null;
+    jumlah_harga: number | null;
+    dipergunakan_pada_unit: string | null;
+    keterangan: string | null;
+    created_at: string;
+}
+
+// @types/index.ts
+export interface MutasiKeluarKibAItem {
+    id: number;
+    jenis_barang: string;
+    nama_barang: string | null;
+    merk_type: string | null;
+    no_sertifikat: string | null;
+    asal_perolehan: string | null;
+    bahan: string | null;
+    tahun_beli: string | null;
+    ukuran_konstruksi: string | null;
+    satuan: string | null;
+    kondisi: string | null; // B, RR, RB
+    jumlah_barang_awal: number | null;
+    harga_awal: number | null;
+    mutasi_berkurang_jumlah: number | null;
+    mutasi_berkurang_harga: number | null;
+    mutasi_bertambah_jumlah: number | null;
+    mutasi_bertambah_harga: number | null;
+    jumlah_barang_akhir: number | null;
+    harga_akhir: number | null;
+    keterangan: string | null;
+    created_at: string;
+}

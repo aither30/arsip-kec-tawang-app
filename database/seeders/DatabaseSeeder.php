@@ -29,18 +29,18 @@ class DatabaseSeeder extends Seeder
         User::factory()->create([
             'name' => 'Alpi Darul Hakim',
             'email' => 'alpidarulhakim30@gmail.com',
-            'password' => Hash::make('alpi30052003'),
+            'password' => Hash::make('alpi30051503'),
         ]);
 
-        KibA::factory(10)->create();
-        KibB::factory(10)->create();
-        KibC::factory(10)->create();
-        KibD::factory(10)->create();
-        KibE::factory(10)->create();
-        KibF::factory(10)->create();
-        KibRekapitulasi::factory(10)->create();
-        KibMutasiMasukKibA::factory(10)->create();
-        PengadaanBarangInventaris::factory(10)->create();
-        MutasiKeluarKibA::factory(10)->create();
+        KibA::factory(15)->create();
+        KibB::factory(15)->create();
+        KibC::factory(15)->create();
+        KibD::factory(15)->create();
+        KibE::factory(15)->create();
+        KibF::factory(15)->create();
+        KibRekapitulasi::factory(15)->create();
+        KibMutasiMasukKibA::factory(15)->create();
+        PengadaanBarangInventaris::factory(15)->create();
+        MutasiKeluarKibA::factory(15)->create();
     }
 }
