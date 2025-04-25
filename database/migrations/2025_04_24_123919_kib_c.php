@@ -17,17 +17,18 @@ return new class extends Migration
             $table->string('nama_barang');
             $table->string('kode_barang');
             $table->string('nomor_register');
-            $table->string('kondisi_bangunan')->('B', 'kb');
-            $table->decimal('ukuran', 10, 2);
-            $table->string('bahan');
-            $table->year('tahun_pembelian');
-            $table->string('pabrik');
-            $table->string('rangka');
-            $table->string('mesin');
-            $table->string('polisi');
-            $table->string('bpkb');
-            $table->string('asal');
+            $table->string('kondisi_bangunan');
+            $table->string('bertingkat');
+            $table->string('beton');
+            $table->decimal('luas_lantai', 10, 2);
+            $table->string('lokasi');
+            $table->date('tanggal_dokumen_gedung');
+            $table->string('nomor_dokumen_gedung');
+            $table->decimal('luas', 10, 2);
+            $table->string('status_tanah');
             $table->string('harga');
+            $table->string('nomor_kode_tanah');
+            $table->string('asal');
             $table->text('keterangan');
             $table->timestamps();
         });
@@ -38,6 +39,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('kib_a');
+        Schema::dropIfExists('kib_c');
     }
 };
