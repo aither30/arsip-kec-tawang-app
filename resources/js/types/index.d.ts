@@ -234,3 +234,26 @@ export interface MutasiKeluarKibAItem {
     keterangan: string | null;
     created_at: string;
 }
+
+interface SuratMasuk {
+    id: number;
+    no: number;
+    tanggal_terima: string;
+    pengirim: string;
+    nomor_surat: string;
+    hal_isi_surat: string;
+    lampiran: string | null;
+    diteruskan_kepada: string;
+    keterangan: string | null;
+}
+
+interface SuratKeluar {
+    id: number;
+    no: number;
+    tanggal: string;
+    nomor_surat: string;
+    index_surat: string;
+    isi_surat: string;
+    dikirimkan_kepada: string;
+    keterangan: string | null;
+}

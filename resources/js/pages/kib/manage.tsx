@@ -118,14 +118,48 @@ export default function Manage({
                         <div className="flex flex-col gap-2">
                             {/* Add Data Button */}
                             <div className="flex gap-2">
-                                <button
-                                    onClick={() => {
-                                        alert(`Tambah data untuk ${selectedKIB}`);
-                                    }}
-                                    className="w-full rounded-lg bg-gray-800 px-4 py-2 text-white shadow-md transition hover:bg-gray-700"
-                                >
-                                    Tambah Data
-                                </button>
+                            <button
+    onClick={() => {
+        switch (selectedKIB) {
+            case 'KIB A':
+                window.location.href = '/kiba/create';
+                break;
+            case 'KIB B':
+                window.location.href = '/kibb/create';
+                break;
+            case 'KIB C':
+                window.location.href = '/kibc/create';
+                break;
+            case 'KIB D':
+                window.location.href = '/kibd/create';
+                break;
+            case 'KIB E':
+                window.location.href = '/kibe/create';
+                break;
+            case 'KIB F':
+                window.location.href = '/kibf/create';
+                break;
+            case 'Tabel Rekapitulasi':
+                window.location.href = '/rekapitulasi/create';
+                break;
+            case 'Tabel Mutasi Masuk KIB A':
+                window.location.href = '/mutasimasukkiba/create';
+                break;
+            case 'Tabel Pengadaan Barang Inventaris':
+                window.location.href = '/pengadaanbaranginventaris/create';
+                break;
+            case 'Tabel Mutasi Keluar KIB A':
+                window.location.href = '/mutasikeluarkiba/create';
+                break;
+            default:
+                alert('Halaman tambah data belum dibuat.');
+        }
+    }}
+    className="w-full rounded-lg bg-gray-800 px-4 py-2 text-white shadow-md transition hover:bg-gray-700"
+>
+    Tambah Data
+</button>
+
                                 <button
                                     onClick={() => {
                                         window.open(`/export-excel?table=${encodeURIComponent(selectedKIB)}`, '_blank');

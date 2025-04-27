@@ -10,6 +10,8 @@ use App\Models\KibD;
 use App\Models\KibE;
 use App\Models\KibF;
 use App\Models\User;
+use App\Models\SuratMasuk;
+use App\Models\SuratKeluar;
 use App\Models\KibRekapitulasi;
 use Illuminate\Database\Seeder;
 use App\Models\MutasiKeluarKibA;
@@ -42,5 +44,7 @@ class DatabaseSeeder extends Seeder
         KibMutasiMasukKibA::factory(15)->create();
         PengadaanBarangInventaris::factory(15)->create();
         MutasiKeluarKibA::factory(15)->create();
+        SuratKeluar::factory()->count(10)->create();
+        SuratMasuk::factory()->count(10)->create();
     }
 }
